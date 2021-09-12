@@ -7,18 +7,23 @@
     <title>ToDo</title>
   </head>
   <body>
-    <header><div class="container">Todo</div></header>
+    <header>
+      <div class="header"><h1>Todo</h1></div>
+    </header>
     <main>
-      <section class="projects-list">
-        <div class="project-container">All</div>
-        <div class="project-container">Scheduled</div>
-        <div class="project-container">important</div>
-        <button>+ New Project</button>
+      <section class="main-container">
+        <div class="sec projects-list">
+          <div class="project-name all"><button>All</button></div>
+          <div class="project-name scheduled"><button>Scheduled</button></div>
+          <div class="project-name important"><button>Important</button></div>
+          <div class="project-name completed"><button>Completed</button></div>
+          <button class="btn new-project">+ New Project</button>
+        </div>
+        <div class="sec project">All</div>
+        <div class="sec todo-item">Todo Item</div>
       </section>
-      <section class="project">All</section>
-      <section class="todo-item"></section>
     </main>
-    <footer></footer>
+    <footer class="footer"></footer>
     <script src="main.js"></script>
   </body>
 </html>
