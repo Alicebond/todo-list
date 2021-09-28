@@ -15,6 +15,7 @@ html {
 body {
   height: 100vh;
   overflow: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .header,
@@ -29,43 +30,58 @@ main {
 }
 
 .header {
-  height: 5%;
-  border-bottom: 1px solid rgb(247, 217, 179);
+  background-color: rgb(247, 217, 179);
+  padding: 0.6rem 0;
 }
 
 .header h1 {
-  font-family: "Segoe UI", Arial, sans-serif;
   letter-spacing: 2px;
   font-size: 4rem;
-  color: rgb(245, 154, 35);
 }
 
 .main-container {
-  text-align: center;
+  align-items: flex-start;
   font-size: 2rem;
-  height: 95%;
+  height: 90%;
 }
 
-.projects-list,
-.project,
-.todo-item {
+.sec-1,
+.sec-2,
+.sec-3 {
   height: 100%;
 }
 
-.projects-list {
+.sec-1 {
   width: 15%;
+  background-color: ghostwhite;
 }
 
-.new-todo,
-.projects-list button {
+ul {
+  list-style: none;
+  /* width: 100%; */
+}
+
+.lists li {
+  font-size: 2rem;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border-bottom: 1px solid rgb(255, 217, 168);
+}
+
+.lists li:hover {
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+
+.lists .btn {
+  margin-left: 2rem;
+}
+
+.btn,
+.lists button {
   width: 10rem;
   height: 3.5rem;
   margin-top: 2rem;
   border: none;
-}
-
-.new-btn {
-  font-weight: bold;
 }
 
 button:hover {
@@ -73,20 +89,34 @@ button:hover {
   cursor: pointer;
 }
 
-.project {
+.sec-2 {
   width: 42.5%;
   border-left: 1px solid rgb(255, 217, 168);
   border-right: 1px solid rgb(255, 217, 168);
 }
 
-.project .name {
-  padding: 0.5rem 0;
+.sec-2 .list-name {
+  padding: 1rem 0 1rem 2rem;
   font-weight: bold;
   font-size: 2.5rem;
   border-bottom: 1px solid rgb(255, 217, 168);
 }
 
-.project .item {
+.sec-2 .new-todo {
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.new-todo .btn-content {
+  font-size: 2rem;
+  font-weight: 100;
+  float: left;
+  margin-left: 2rem;
+}
+
+.sec-2 .todo {
   padding: 0.5rem 0;
   border-bottom: 1px solid rgb(255, 217, 168);
 }
@@ -108,16 +138,32 @@ button:hover {
   border: none;
 }
 
-.project .new {
-  position: sticky;
-  bottom: 0;
-  /* margin-top: 5rem; */
+.sec-2 .todo-content {
+  margin-left: 4rem;
 }
 
-.todo-item {
+.sec-2 .delete-list {
+  margin-left: 2rem;
+}
+
+.sec-3 {
   width: 42.5%;
+  border-left: 1px solid rgb(255, 217, 168);
+  background-color: ghostwhite;
 }
 
-.item-name {
-  font-weight: bold;
+.sec-3 .details {
+  border: 1px solid rgb(255, 217, 168);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: white;
 }
+
+/* .todo-notes {
+  margin: 2rem;
+} */

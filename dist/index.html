@@ -13,29 +13,43 @@
       </header>
 
       <section class="main-container">
-        <div class="sec projects-list">
-          <div class="project-name all"><button>All</button></div>
-          <div class="project-name today"><button>Today</button></div>
-          <div class="project-name scheduled"><button>Scheduled</button></div>
-          <div class="project-name important"><button>Important</button></div>
-          <div class="project-name completed"><button>Completed</button></div>
-          <button class="new-btn new-project">+ New Project</button>
+        <div class="sec-1 lists">
+          <ul>
+            <li class="list-name all">All</li>
+            <li class="list-name today">Today</li>
+            <li class="list-name scheduled">Scheduled</li>
+            <li class="list-name important">Important</li>
+            <li class="list-name completed">Completed</li>
+          </ul>
+          <button class="btn new new-list">+ New List</button>
         </div>
-        <div class="sec project">
-          <div class="name">All</div>
-          <div class="item">
-            <label class="label">
-              <input type="checkbox" name="item-checkbox" />
-            </label>
-            Todo item 1
+        <div class="sec-2">
+          <div class="list-name">All</div>
+          <div class="add-todo">
+            <button class="btn new-todo">
+              <span class="btn-content">+ New todo</span>
+            </button>
           </div>
-          <div class="btn">
-            <button class="new-btn new-todo">+ New Todo</button>
-            <button class="new-btn new-todo">Delete Project</button>
+          <div class="todos">
+            <div class="todo">
+              <label class="label">
+                <input type="checkbox" name="todo-checkbox" />
+              </label>
+              <div class="todo-content">Todo 1</div>
+            </div>
+          </div>
+          <div class="button">
+            <button class="btn delete-list">Delete List</button>
           </div>
         </div>
-        <div class="sec todo-item">
-          <div class="item-name">Todo Item 1</div>
+        <div class="sec-3 todo-details">
+          <div class="details todo-content">Todo 1</div>
+          <div class="details todo-notes">
+            <input type="text" />
+          </div>
+          <div class="details todo-date">Add due date</div>
+          <div class="details todo-priority">Add priority</div>
+          <div class="details todo-assignment">Assign list</div>
         </div>
       </section>
       <footer class="footer"></footer>
