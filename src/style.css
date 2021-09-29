@@ -61,32 +61,69 @@ ul {
   /* width: 100%; */
 }
 
-.lists li {
+.list-name {
   font-size: 2rem;
   padding: 0.5rem 0 0.5rem 2rem;
   border-bottom: 1px solid rgb(255, 217, 168);
 }
 
-.lists li:hover {
+.new-list {
+  font-weight: 100;
+}
+
+.list-name:hover {
   background-color: antiquewhite;
   cursor: pointer;
 }
 
-.lists .btn {
-  margin-left: 2rem;
+.completed {
+  margin-top: 4rem;
+  border-top: 1px solid rgb(255, 217, 168);
 }
 
-.btn,
-.lists button {
+.submit,
+.delete-list {
+  font-size: 1.8rem;
   width: 10rem;
   height: 3.5rem;
   margin-top: 2rem;
   border: none;
 }
 
+.delete {
+  float: right;
+  border: none;
+  margin-right: 0.5rem;
+  height: 2rem;
+}
+
+.fa-trash-alt {
+  font-size: 1.8rem;
+}
+
+.fa-trash-alt:hover {
+  color: #ec1d0e;
+}
+
 button:hover {
   background-color: rgb(247, 217, 179);
   cursor: pointer;
+}
+
+.form {
+  text-align: center;
+}
+
+.new-list {
+  border: none;
+  font-size: 2rem;
+  margin-top: 5rem;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+
+.submit {
+  margin-top: 1rem;
 }
 
 .sec-2 {
@@ -103,6 +140,7 @@ button:hover {
 }
 
 .sec-2 .new-todo {
+  border: none;
   margin-top: 0;
   width: 100%;
   height: 100%;
@@ -163,7 +201,3 @@ button:hover {
   padding: 1rem 2rem;
   background: white;
 }
-
-/* .todo-notes {
-  margin: 2rem;
-} */

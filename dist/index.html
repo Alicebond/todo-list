@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/8418464a80.js"
+      crossorigin="anonymous"
+    ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
   </head>
@@ -13,15 +17,18 @@
       </header>
 
       <section class="main-container">
-        <div class="sec-1 lists">
-          <ul>
+        <div class="sec-1">
+          <ul class="lists">
             <li class="list-name all">All</li>
             <li class="list-name today">Today</li>
             <li class="list-name scheduled">Scheduled</li>
             <li class="list-name important">Important</li>
-            <li class="list-name completed">Completed</li>
           </ul>
-          <button class="btn new new-list">+ New List</button>
+          <div class="list-name completed">Completed</div>
+          <div class="form">
+            <input type="text" class="new-list" placeholder="Add new list" />
+            <button class="btn submit">Submit</button>
+          </div>
         </div>
         <div class="sec-2">
           <div class="list-name">All</div>
@@ -45,6 +52,7 @@
         <div class="sec-3 todo-details">
           <div class="details todo-content">Todo 1</div>
           <div class="details todo-notes">
+            Add description
             <input type="text" />
           </div>
           <div class="details todo-date">Add due date</div>
