@@ -2,11 +2,13 @@
 import './style.css';
 import {
   createNewList,
-  // listenRemoveBtn
 } from "./lists.js"
+import {
+  addNewTodo,
+} from "./todos.js"
 
-const newListBtn = document.querySelector(".submit");
+const newListBtn = document.querySelector(".add-new-list");
 newListBtn.addEventListener("click", createNewList);
 
-// const userList = document.querySelector(".user-list");
-// if (userList) listenRemoveBtn();
+const newTodoBtn = document.querySelector(".add-new-todo");
+newTodoBtn.addEventListener("click", addNewTodo);

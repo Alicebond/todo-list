@@ -14,7 +14,7 @@ html {
 
 body {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
@@ -32,6 +32,7 @@ main {
 .header {
   background-color: rgb(247, 217, 179);
   padding: 0.6rem 0;
+  /* height: 10rem; */
 }
 
 .header h1 {
@@ -42,7 +43,7 @@ main {
 .main-container {
   align-items: flex-start;
   font-size: 2rem;
-  height: 90%;
+  height: 94%;
 }
 
 .sec-1,
@@ -58,7 +59,6 @@ main {
 
 ul {
   list-style: none;
-  /* width: 100%; */
 }
 
 .list-name {
@@ -105,7 +105,7 @@ ul {
   color: #ec1d0e;
 }
 
-button:hover {
+.btn:hover {
   background-color: rgb(247, 217, 179);
   cursor: pointer;
 }
@@ -132,26 +132,28 @@ button:hover {
   border-right: 1px solid rgb(255, 217, 168);
 }
 
-.sec-2 .list-name {
+.sec-2-list-name {
   padding: 1rem 0 1rem 2rem;
   font-weight: bold;
   font-size: 2.5rem;
   border-bottom: 1px solid rgb(255, 217, 168);
 }
 
-.sec-2 .new-todo {
-  border: none;
-  margin-top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1rem 0;
+.add-todo {
+  display: flex;
 }
 
-.new-todo .btn-content {
+.todo-input {
+  flex: 1;
+  border: none;
+  background-color: #f6f6f6;
+}
+
+.new-todo {
+  border: none;
+  padding: 1rem 2rem;
   font-size: 2rem;
   font-weight: 100;
-  float: left;
-  margin-left: 2rem;
 }
 
 .sec-2 .todo {
