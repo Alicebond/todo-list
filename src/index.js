@@ -2,10 +2,10 @@
 import './style.css';
 import {
   createNewList,
-} from "./lists.js"
+} from "./showLists.js"
 import {
   addNewTodo,
-} from "./todos.js"
+} from "./showTodos.js"
 
 const newListBtn = document.querySelector(".add-new-list");
 newListBtn.addEventListener("click", createNewList);
