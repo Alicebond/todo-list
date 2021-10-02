@@ -47,22 +47,49 @@
           </div>
           <div class="todos">
             <div class="todo">
-              <label class="label">
-                <input type="checkbox" name="todo-checkbox" />
-              </label>
-              <div class="todo-content">Todo 1</div>
+              <div class="todo-content">
+                <label class="label">
+                  <input type="checkbox" name="todo-checkbox" />
+                </label>
+                Todo 1
+              </div>
             </div>
           </div>
         </div>
         <div class="sec-3 todo-details">
           <div class="details todo-content">Todo 1</div>
           <div class="details todo-notes">
-            Add description
-            <input type="text" />
+            <input type="text" placeholder="Add Notes" class="notes" />
+            <button class="btn add-notes">Add</button>
           </div>
-          <div class="details todo-date">Add due date</div>
-          <div class="details todo-priority">Add priority</div>
-          <div class="details todo-assignment">Assign list</div>
+          <div class="details todo-date">
+            <label for="duedate">Add due date:</label>
+            <input
+              type="datetime-local"
+              id="due-date"
+              name="duedate"
+              class="due-date"
+            />
+          </div>
+          <div class="details todo-priority">
+            <label for="priority">Choose priority:</label>
+            <select name="priority" id="priority">
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="purple">Purple</option>
+            </select>
+          </div>
+          <div class="details todo-assignment">
+            <label for="assign">Assign list:</label>
+            <select name="assign" id="assign">
+              <option value="all">All</option>
+              <option value="all">Today</option>
+              <option value="all">Scheduled</option>
+              <option value="all">Important</option>
+            </select>
+          </div>
         </div>
       </section>
       <footer class="footer"></footer>

@@ -105,6 +105,10 @@ ul {
   color: #ec1d0e;
 }
 
+.btn {
+  background-color: gainsboro;
+}
+
 .btn:hover {
   background-color: rgb(247, 217, 179);
   cursor: pointer;
@@ -147,13 +151,13 @@ ul {
   flex: 1;
   border: none;
   background-color: #f6f6f6;
+  font-weight: 100;
 }
 
 .new-todo {
   border: none;
   padding: 1rem 2rem;
   font-size: 2rem;
-  font-weight: 100;
 }
 
 .sec-2 .todo {
@@ -169,7 +173,7 @@ ul {
 
 .label {
   float: left;
-  margin-left: 1rem;
+  margin-right: 1rem;
   user-select: none;
 }
 
@@ -179,7 +183,7 @@ ul {
 }
 
 .sec-2 .todo-content {
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 .sec-2 .delete-list {
@@ -192,7 +196,7 @@ ul {
   background-color: ghostwhite;
 }
 
-.sec-3 .details {
+.details {
   border: 1px solid rgb(255, 217, 168);
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -202,4 +206,32 @@ ul {
   margin: 1rem;
   padding: 1rem 2rem;
   background: white;
+}
+
+.todo-notes {
+  padding: 0;
+  display: flex;
+}
+
+.notes {
+  border: none;
+  height: 4rem;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 100;
+  padding-left: 2rem;
+}
+
+.add-notes {
+  border: none;
+  padding: 0 2rem;
+  font-size: 2rem;
+}
+
+.due-date,
+.todo-priority select,
+.todo-assignment select {
+  border: none;
+  font-size: 2rem;
+  background-color: antiquewhite;
 }

@@ -1,14 +1,16 @@
 "use strict";
 import './style.css';
 import {
-  createNewList,
-} from "./showLists.js"
-import {
+  addNewList,
   addNewTodo,
-} from "./showTodos.js"
+  addNotes
+} from "./dom.js"
 
 const newListBtn = document.querySelector(".add-new-list");
-newListBtn.addEventListener("click", createNewList);
+newListBtn.addEventListener("click", addNewList);
 
 const newTodoBtn = document.querySelector(".add-new-todo");
 newTodoBtn.addEventListener("click", addNewTodo);
+
+const addNoteBtn = document.querySelector(".add-notes");
+addNoteBtn.addEventListener("click", addNotes);
