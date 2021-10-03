@@ -64,7 +64,7 @@ ul {
 .list-name {
   font-size: 2rem;
   padding: 0.5rem 0 0.5rem 2rem;
-  border-bottom: 1px solid rgb(255, 217, 168);
+  border-bottom: 1px solid antiquewhite;
 }
 
 .new-list {
@@ -78,7 +78,7 @@ ul {
 
 .completed {
   margin-top: 4rem;
-  border-top: 1px solid rgb(255, 217, 168);
+  border-top: 1px solid antiquewhite;
 }
 
 .submit,
@@ -106,11 +106,11 @@ ul {
 }
 
 .btn {
-  background-color: gainsboro;
+  background-color: antiquewhite;
 }
 
 .btn:hover {
-  background-color: rgb(247, 217, 179);
+  background-color: burlywood;
   cursor: pointer;
 }
 
@@ -132,15 +132,15 @@ ul {
 
 .sec-2 {
   width: 42.5%;
-  border-left: 1px solid rgb(255, 217, 168);
-  border-right: 1px solid rgb(255, 217, 168);
+  border-left: 1px solid antiquewhite;
+  border-right: 1px solid antiquewhite;
 }
 
 .sec-2-list-name {
   padding: 1rem 0 1rem 2rem;
   font-weight: bold;
   font-size: 2.5rem;
-  border-bottom: 1px solid rgb(255, 217, 168);
+  border-bottom: 1px solid antiquewhite;
 }
 
 .add-todo {
@@ -162,7 +162,7 @@ ul {
 
 .sec-2 .todo {
   padding: 0.5rem 0;
-  border-bottom: 1px solid rgb(255, 217, 168);
+  border-bottom: 1px solid antiquewhite;
 }
 
 .label,
@@ -192,12 +192,12 @@ ul {
 
 .sec-3 {
   width: 42.5%;
-  border-left: 1px solid rgb(255, 217, 168);
+  border-left: 1px solid antiquewhite;
   background-color: ghostwhite;
 }
 
 .details {
-  border: 1px solid rgb(255, 217, 168);
+  border: 1px solid antiquewhite;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -228,10 +228,86 @@ ul {
   font-size: 2rem;
 }
 
-.due-date,
-.todo-priority select,
-.todo-assignment select {
+.due-date {
+  border: 2px solid antiquewhite;
+  font-size: 1.6rem;
+}
+
+.todo-priority {
+  display: flex;
+  align-items: center;
+}
+
+.todo-priority {
+  padding: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  font-size: 1.8rem;
   border: none;
-  font-size: 2rem;
+  cursor: pointer;
+  height: 4rem;
+  padding: 0 2rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  color: black;
+  text-decoration: none;
   background-color: antiquewhite;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+}
+
+.dropdown-content a:hover {
+  background-color: burlywood;
+}
+
+.show {
+  display: block;
+}
+
+.fa-circle {
+  font-size: 1.8rem;
+  padding-right: 1rem;
+}
+
+.red,
+.red .fa-circle {
+  color: red;
+}
+
+.yellow,
+.yellow .fa-circle {
+  color: yellow;
+}
+
+.green,
+.green .fa-circle {
+  color: green;
+}
+
+.purple,
+.purple .fa-circle {
+  color: purple;
+}
+
+.blue,
+.blue .fa-circle {
+  color: blue;
+}
+
+.pri-tag {
+  margin-left: 2rem;
 }

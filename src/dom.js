@@ -65,8 +65,53 @@ function removeList(el) {
   deleteBtn.parentElement.remove();
 }
 
+function showDorpdown(e) {
+  if (e.target.matches(".pri-btn")) {
+    document.querySelector("#priDropdown").classList.toggle("show");
+  }
+  if (e.target.matches(".assign-btn")) {
+    document.querySelector("#assignDropdown").classList.toggle("show");
+  }
+}
+
+function closeDorpdown() {
+  window.onclick = function (e) {
+    if (!e.target.matches(".dropbtn")) {
+      let dropdowns = document.getElementsByClassName("dropdown-content");
+      for (let i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].classList.contains("show")) {
+          dropdowns[i].classList.remove("show");
+        }
+      }
+    }
+  }
+}
+
+function getPri(e) {
+  let color = e.target.textContent;
+  if (color === "Red") addPri("red");
+  else if (color === "Yellow") addPri("yellow");
+  else if (color === "Green") addPri("green");
+  else if (color === "Purple") addPri("purple");
+  else if (color === "Blue") addPri("blue");
+}
+
+function addPri(color) {
+  const todoPriority = document.querySelector("#todoPriority");
+  const priTag = document.createElement('div');
+  const colorTag = document.createElement('i')
+  // <i class="fas fa-tag"></i>
+  colorTag.classList.add("fas", "fa-tag");
+  priTag.classList.add(color, "pri-tag");
+  priTag.append(colorTag)
+  todoPriority.append(priTag);
+}
+
 export {
   addNewTodo,
   addNewList,
   addNotes,
+  showDorpdown,
+  closeDorpdown,
+  getPri,
 }
