@@ -15,7 +15,7 @@ newListBtn.addEventListener("click", addNewList, false);
 const newTodoBtn = document.querySelector(".add-new-todo");
 newTodoBtn.addEventListener("click", addNewTodo, false);
 
-const addNoteBtn = document.querySelector(".add-notes");
+const addNoteBtn = document.querySelector(".add-notes-btn");
 addNoteBtn.addEventListener("click", addNotes, false);
 
 const priBtn = document.querySelector(".pri-btn");

@@ -36,12 +36,15 @@ function addNewTodo() {
 }
 
 function addNotes() {
-  const notesBlock = document.querySelector(".todo-notes");
+  const addNotesBlock = document.querySelector(".add-notes")
+  const notesBlock = document.createElement("div");
+  notesBlock.classList.add("details", "todo-notes");
   const notes = document.querySelector(".notes").value.trim();
   if (!notes) return;
   const notesContent = document.createElement("div")
   notesContent.textContent = notes;
   notesBlock.append(notesContent);
+  addNotesBlock.before(notesBlock);
 }
 
 

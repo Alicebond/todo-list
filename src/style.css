@@ -209,6 +209,15 @@ ul {
 }
 
 .todo-notes {
+  margin: 0 1rem;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 100;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.add-notes {
+  margin-top: 0;
   padding: 0;
   display: flex;
 }
@@ -222,7 +231,7 @@ ul {
   padding-left: 2rem;
 }
 
-.add-notes {
+.add-notes-btn {
   border: none;
   padding: 0 2rem;
   font-size: 2rem;

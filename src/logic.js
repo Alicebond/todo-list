@@ -7,6 +7,12 @@ function storeList(newList) {
   localStorage.setItem("lists", listsLibrary);
 }
 
+function todo(newTodo) {
+  let todo = newTodo;
+
+  // function
+}
+
 export {
   storeList,
 }
