@@ -1,18 +1,46 @@
 "use strict";
-
-let listsLibrary = [];
+let lists = [];
+localStorage.setItem("lists", lists);
 
 function storeList(newList) {
-  listsLibrary.push(newList);
-  localStorage.setItem("lists", listsLibrary);
+  const store = () => {
+    lists.push(newList);
+  }
+  const newTodo = todoFactory(todo, notes, color)
+  const storeTodo = () => {
+    newList.push(newTodo);
+  }
+
+  return {
+    store,
+    storeTodo,
+  }
 }
 
-function todo(newTodo) {
+function todoFactory(newTodo, notes, color) {
   let todo = newTodo;
+  let notesArr = [];
+  let dueDate;
+  let priority = []
 
-  // function
+  const storeNotes = () => {
+    notesArr.push(notes);
+  }
+
+  const storePri = () => {
+    priority.push(color);
+  }
+
+  return {
+    todo,
+    notesArr,
+    priority,
+  }
 }
+
+const todoItem = todoFactory();
+const library = store();
 
 export {
-  storeList,
+  library,
 }
