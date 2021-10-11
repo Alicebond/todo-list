@@ -71,7 +71,8 @@ ul {
   font-weight: 100;
 }
 
-.list-name:hover {
+.list-name:hover,
+.todo:hover {
   background-color: antiquewhite;
   cursor: pointer;
 }

@@ -18,7 +18,7 @@
 
       <section class="main-container">
         <div class="sec-1">
-          <ul class="lists">
+          <ul class="lists" id="lists">
             <li class="list-name all">All</li>
             <li class="list-name today">Today</li>
             <li class="list-name scheduled">Scheduled</li>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="sec-2">
-          <div class="sec-2-list-name">All</div>
+          <div class="sec-2-list-name" id="listName">All</div>
           <div class="add-todo">
             <input
               type="text"
@@ -45,7 +45,7 @@
               required
             /><button class="btn new-todo add-new-todo">Add</button>
           </div>
-          <div class="todos">
+          <div class="todos" id="todos">
             <div class="todo">
               <div class="todo-content">
                 <label class="label">
@@ -66,7 +66,7 @@
             <label for="duedate">Add due date:</label>
             <input
               type="datetime-local"
-              id="due-date"
+              id="dueDate"
               name="duedate"
               class="due-date"
             />

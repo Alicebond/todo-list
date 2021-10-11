@@ -1,6 +1,6 @@
 "use strict";
 import {
-  storeList,
+  todoItem,
 } from "./logic.js";
 
 function addNewList() {
@@ -12,13 +12,17 @@ function addNewList() {
   newList.classList.add('list-name', "user-list", newListName);
   lists.appendChild(newList);
   addDeleteBtn(newList);
-  storeList(newListName);
+  todoItem.storeListName(newListName);
 }
 
-function addNewTodo() {
-  const todos = document.querySelector(".todos");
-  const newTodo = document.querySelector(".todo-input").value.trim();
+function getNewTodo() {
+  let newTodo = document.querySelector(".todo-input").value.trim();
   if (!newTodo) return;
+  else addNewTodo(newTodo);
+}
+
+function addNewTodo(newTodo) {
+  const todos = document.querySelector(".todos");
   const label = document.createElement("label")
   const checkbox = document.createElement("input")
   const todoContent = document.createElement("div");
@@ -33,6 +37,7 @@ function addNewTodo() {
   label.append(checkbox);
 
   addDeleteBtn(todoContent);
+  todoItem.storeTodo(newTodo);
 }
 
 function addNotes() {
@@ -45,6 +50,8 @@ function addNotes() {
   notesContent.textContent = notes;
   notesBlock.append(notesContent);
   addNotesBlock.before(notesBlock);
+
+  todoItem.storeNotes(notes);
 }
 
 
@@ -52,7 +59,7 @@ function addDeleteBtn(element) {
   const deleteBtn = document.createElement("button")
   deleteBtn.classList.add("btn", "delete");
   deleteBtn.onclick = function () {
-    removeList(this);
+    removeItem(this);
   }
   const delIcon = document.createElement("i");
   // <i class="fas fa-trash-alt"></i> // Icon tag from font awesome
@@ -63,7 +70,7 @@ function addDeleteBtn(element) {
 }
 
 
-function removeList(el) {
+function removeItem(el) {
   let deleteBtn = el;
   deleteBtn.parentElement.remove();
 }
@@ -97,6 +104,8 @@ function getPri(e) {
   else if (color === "Green") addPri("green");
   else if (color === "Purple") addPri("purple");
   else if (color === "Blue") addPri("blue");
+
+  todoItem.storePri(color);
 }
 
 function addPri(color) {
@@ -110,11 +119,33 @@ function addPri(color) {
   todoPriority.append(priTag);
 }
 
+function showList(e) {
+  let newName = e.target.textContent
+  let listName = document.querySelector("#listName");
+  listName.textContent = newName;
+  let lists = localStorage.getItem("lists");
+  for (let key of lists) {
+    let arr = lists[key];
+    if (!arr) return;
+    for (let item of arr) {
+      let todo = item.todo;
+      if (todo) addNewTodo(todo);
+    }
+  }
+}
+
+function showTodo(e) {
+  let todo = e.target.textContent.trim();
+}
+
 export {
-  addNewTodo,
+  showTodo,
+  getNewTodo,
   addNewList,
   addNotes,
   showDorpdown,
   closeDorpdown,
   getPri,
+  todoItem,
+  showList,
 }
