@@ -40,12 +40,16 @@ function addNewTodo(newTodo) {
   todoItem.storeTodo(newTodo);
 }
 
-function addNotes() {
+function getNotes() {
+  const notes = document.querySelector(".notes").value.trim();
+  if (!notes) return;
+  else addNotes(notes)
+}
+
+function addNotes(notes) {
   const addNotesBlock = document.querySelector(".add-notes")
   const notesBlock = document.createElement("div");
   notesBlock.classList.add("details", "todo-notes");
-  const notes = document.querySelector(".notes").value.trim();
-  if (!notes) return;
   const notesContent = document.createElement("div")
   notesContent.textContent = notes;
   notesBlock.append(notesContent);
@@ -136,13 +140,33 @@ function showList(e) {
 
 function showTodo(e) {
   let todo = e.target.textContent.trim();
+  const todoContent = document.querySelector("#todoContent");
+  if (todo) todoContent.textContent = todo;
+  let lists = localStorage.getItem("lists");
+  for (let key of lists) {
+    let list = lists[key];
+    if (!list) return;
+    for (let item of list) {
+      if (todo === item) {
+        let notesArr = item.notesArr;
+        if (notesArr.length) {
+          for (let i of notesArr) addNotes(i);
+        };
+        // let date = item.date;
+        let priArr = item.priority;
+        if (priArr.length) {
+          for (let color of priArr) addPri(color);
+        }
+      }
+    }
+  }
 }
 
 export {
   showTodo,
   getNewTodo,
   addNewList,
-  addNotes,
+  getNotes,
   showDorpdown,
   closeDorpdown,
   getPri,

@@ -4,7 +4,7 @@ import {
   addNewList,
   getNewTodo,
   showTodo,
-  addNotes,
+  getNotes,
   showDorpdown,
   closeDorpdown,
   getPri,
@@ -19,7 +19,7 @@ const newTodoBtn = document.querySelector(".add-new-todo");
 newTodoBtn.addEventListener("click", getNewTodo, false);
 
 const addNoteBtn = document.querySelector(".add-notes-btn");
-addNoteBtn.addEventListener("click", addNotes, false);
+addNoteBtn.addEventListener("click", getNotes, false);
 
 const priBtn = document.querySelector(".pri-btn");
 priBtn.addEventListener("click", showDorpdown, false);
@@ -42,5 +42,8 @@ const todos = document.querySelector("#todos");
 todos.addEventListener("click", e => {
   showTodo(e);
 })
+
+const checkBox = document.querySelector("#checkBox");
+console.log(checkBox.checked);
 
 todoItem.store();
