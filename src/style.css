@@ -161,8 +161,7 @@ ul {
   font-size: 2rem;
 }
 
-.sec-2 .todo {
-  padding: 0.5rem 0;
+.sec-2 .todo-item {
   border-bottom: 1px solid antiquewhite;
 }
 
@@ -184,7 +183,8 @@ ul {
 }
 
 .sec-2 .todo-content {
-  margin-left: 2rem;
+  padding: 0.5rem 0 0.5rem 2rem;
+  /* color: grey; */
 }
 
 .sec-2 .delete-list {

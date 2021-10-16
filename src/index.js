@@ -44,6 +44,15 @@ todos.addEventListener("click", e => {
 })
 
 const checkBox = document.querySelector("#checkBox");
-console.log(checkBox.checked);
+checkBox.addEventListener("click", () => {
+  if (!checkBox.checked) return;
+  else {
+    let el = checkBox.closest(".todo-content");
+    el.classList.remove("todo");
+    el.style.color = "grey";
+    el.style.cursor = "not-allowed"
+  }
+})
+
 
 todoItem.store();
